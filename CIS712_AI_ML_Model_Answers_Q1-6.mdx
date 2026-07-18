@@ -1,0 +1,167 @@
+---
+title: "CIS 712 AI/ML Practice Questions"
+subtitle: "Model Answers to Theory Questions (1–6)"
+course: "CIS 712"
+topic: "Artificial Intelligence / Machine Learning"
+---
+
+# CIS 712 AI/ML Practice Questions
+
+_Model Answers to Theory Questions (1–6)_
+
+## Question 1
+
+### 1a. Define Artificial Intelligence (AI) and Machine Learning (ML), and explain the relationship between them.
+
+Artificial Intelligence is the field concerned with building machines that can do things we normally think require human intelligence, like reasoning, learning, understanding language, and making decisions. Machine Learning is a part of AI where, instead of writing out every rule by hand, we let the system learn patterns from data and get better with experience.
+
+The two are closely linked. ML is really just one of the main ways we achieve AI, so it sits inside AI as a subset. Every ML system is a form of AI, but not every AI system uses ML. A rule-based expert system, for example, is AI even though it never learns from data. Put simply, AI is the goal and ML is one of the most powerful tools we use to get there.
+
+### 1b. Discuss five major stages involved in the development of a Machine Learning project, explaining the purpose of each stage.
+
+1. **Problem Definition and Data Collection.** First you decide exactly what you are trying to predict and gather data that represents the real situation.
+2. **Data Preparation.** Next you clean and reshape the data by handling missing values, encoding categories, and scaling numbers so the algorithm can actually use it.
+3. **Model Training.** You then pick an algorithm and let it learn the patterns in the training data.
+4. **Model Evaluation.** You test the trained model on data it has never seen to check how well it generalises and to catch problems like overfitting.
+5. **Deployment and Monitoring.** Finally you put the model to work on real data and keep an eye on it over time, retraining whenever its performance starts to slip.
+
+### 1c. Explain three factors that influence the performance of a Machine Learning model.
+
+1. **The amount and quality of the data.** More clean, representative data usually means a better model, while noisy or biased data drags performance down no matter how good the algorithm is.
+2. **The features you give it.** Informative, well-prepared features make the underlying pattern much easier to learn, whereas irrelevant ones just add noise.
+3. **The algorithm and its settings.** Choosing a suitable algorithm and tuning its hyperparameters properly keeps the model from underfitting or overfitting.
+
+### 1d. Differentiate between Artificial Intelligence, Machine Learning, and Deep Learning.
+
+The three fit inside one another, with AI being the widest and Deep Learning the narrowest.
+
+- **Artificial Intelligence** is the broadest idea: any technique that lets a machine act intelligently, including plain rule-based systems.
+- **Machine Learning** is a part of AI where systems learn from data instead of following hand-coded rules.
+- **Deep Learning** is a part of ML that uses neural networks with many layers to learn features automatically from raw data.
+
+The main practical difference is that traditional ML usually needs a human to design the features by hand, while deep learning works those out for itself but pays for it with a much bigger appetite for data and computing power.
+
+### 1e. Explain supervised learning, unsupervised learning, semi-supervised learning, and reinforcement learning.
+
+- **Supervised learning** trains on labelled data, where every example comes with the right answer, so the model learns to predict outputs for new inputs. Spam detection is a good example.
+- **Unsupervised learning** works with unlabelled data and tries to find hidden structure on its own, such as grouping similar customers together.
+- **Semi-supervised learning** sits in between, learning from a small amount of labelled data alongside a large amount of unlabelled data. It is handy when labelling is expensive.
+- **Reinforcement learning** has an agent learn by trial and error, taking actions in an environment and picking up rewards or penalties as feedback. Game-playing AI and robotics are typical examples.
+
+## Question 2
+
+### 2a. Discuss five applications of Artificial Intelligence in different sectors of the economy.
+
+1. **Healthcare**, where AI reads medical scans, helps with diagnosis, and speeds up drug discovery.
+2. **Finance**, where it flags fraud, scores credit, and drives automated trading.
+3. **Retail and e-commerce**, where it powers product recommendations, demand forecasting, and personalised marketing.
+4. **Transportation**, where it supports self-driving systems, route planning, and predictive maintenance.
+5. **Agriculture**, where it monitors crops and soil, spots pests, and predicts yields.
+
+### 2b. Explain two limitations of Machine Learning systems.
+
+1. **They depend heavily on data.** A model needs large amounts of clean, unbiased data to do well, and if the data is poor or skewed, so are its predictions.
+2. **They can be hard to trust and may not generalise.** Many models, especially deep ones, are difficult to interpret, and they can overfit the training data and then fail on anything new.
+
+### 2c. State two characteristics of a good training dataset.
+
+1. **It is representative and unbiased**, reflecting the real population and covering all the cases the model will meet.
+2. **It is accurate, clean, and large enough**, meaning it is correctly labelled, free of errors, and big enough to capture the real patterns.
+
+## Question 3
+
+### 3a. Explain the concept of feature engineering and discuss its importance in Machine Learning.
+
+Feature engineering is the work of choosing, creating, and reshaping the input variables a model learns from. That can mean encoding categories as numbers, scaling values, or building brand-new features out of existing ones.
+
+It matters a great deal because the quality of your features often counts for more than the choice of algorithm. Good features make the pattern easy to see, lift accuracy, cut down on overfitting, and let you fold in real domain knowledge. In classical machine learning it is usually the step that decides whether a project succeeds.
+
+### 3b. Describe five stages involved in developing an Artificial Intelligence solution from problem definition to deployment.
+
+1. **Problem Definition**, where you set the objectives and decide what success looks like.
+2. **Data Collection and Preparation**, where you gather data, clean it, and engineer features.
+3. **Model Building**, where you choose algorithms and train the model.
+4. **Evaluation and Tuning**, where you test on unseen data and adjust the settings.
+5. **Deployment and Monitoring**, where you release the model and keep watching and retraining it.
+
+### 3c. Explain the difference between classification and regression problems in Machine Learning.
+
+Both are forms of supervised learning, and the difference is in what they predict. Classification predicts a category, like whether an email is spam or not, and is judged with metrics such as accuracy, precision, and recall. Regression predicts a continuous number, like a house price, and is judged with metrics such as mean squared error and R². In short, classification answers "which category?" while regression answers "how much?".
+
+### 3d. State two common evaluation metrics used in Machine Learning and explain what each measures.
+
+1. **Accuracy**, which is the share of all predictions the model gets right.
+2. **Precision**, which is, out of everything the model labelled positive, how much really was positive.
+
+> Recall, F1-score, or mean squared error for regression would also be fine answers.
+
+## Question 4
+
+### 4a. Discuss the importance of data preprocessing in Artificial Intelligence and Machine Learning projects.
+
+Real-world data is almost always messy, incomplete, and inconsistent, so preprocessing is where a lot of the value is created. Cleaning and reshaping the data improves accuracy, gets it into a form the algorithm can handle through encoding and scaling, and strips out noise and bias. Since a model can only ever be as good as the data it learns from, this stage tends to take up the largest slice of time in a project.
+
+### 4b. Explain five techniques commonly used during data preprocessing before model training.
+
+1. **Handling missing values**, by filling them in with the mean, median, or mode, or dropping them.
+2. **Encoding categorical variables**, using one-hot or label encoding so text becomes numbers.
+3. **Feature scaling**, normalising or standardising values so no feature dominates just because of its range.
+4. **Handling outliers**, by removing, capping, or transforming extreme or impossible values.
+5. **Data transformation**, creating or reshaping features to make patterns easier to spot.
+
+### 4c. Describe the purpose of training, validation, and testing datasets.
+
+The training set is what the model actually learns from. The validation set is used along the way to tune settings and compare different models. The testing set is kept untouched until the very end, when it gives an honest measure of how the model will do on new data. Splitting the data this way keeps you from mistaking memorisation for real understanding.
+
+### 4d. Explain the concept of overfitting and suggest one technique for minimizing it.
+
+Overfitting happens when a model learns the training data a little too well, picking up its random noise along with the real pattern. It then looks great on the training data but stumbles on anything new. The usual sign is a model that is too complex for the amount of data it has. One good way to reduce it is regularisation, which discourages needless complexity. Cross-validation, gathering more data, simplifying the model, early stopping, and dropout all work too.
+
+## Question 5
+
+### 5a. Explain the concept of Deep Learning and discuss how it differs from conventional Machine Learning.
+
+Deep learning uses neural networks with many layers to learn complex patterns straight from raw data, building up features one layer at a time. What sets it apart from conventional machine learning is that it works out the features by itself rather than relying on you to design them, but in return it needs far more data and much heavier computing power, often GPUs. It shines on unstructured data like images, audio, and text, though it is harder to interpret than simpler models.
+
+### 5b. Describe five popular Deep Learning architectures, stating one application area for each.
+
+1. **CNNs**, used for images and computer vision.
+2. **RNNs**, used for sequential data such as speech.
+3. **LSTMs**, used for long sequences like language translation.
+4. **Transformers**, used for large language models and text generation.
+5. **GANs**, used to generate realistic images and synthetic data.
+
+### 5c. Explain the role of activation functions in neural networks.
+
+An activation function takes a neuron's weighted input and turns it into an output. Its most important job is adding non-linearity, which is what lets the network learn complicated patterns. Without it, no matter how many layers you stack, the whole thing would behave like one straight-line model. Activation functions also shape the output range, so a sigmoid squeezes values into 0 to 1 and softmax turns them into probabilities. Common choices are ReLU, sigmoid, tanh, and softmax.
+
+### 5d. State two advantages of Deep Learning over traditional Machine Learning approaches.
+
+1. **It extracts features automatically**, so you skip most of the manual feature engineering.
+2. **It performs better on large, complex, unstructured data** like images, audio, and text, and keeps improving as more data arrives.
+
+## Question 6
+
+### 6a. Discuss the importance of Explainable Artificial Intelligence (XAI) in modern AI applications.
+
+Explainable AI is about making a model's decisions understandable instead of leaving them as a black box. It matters because people trust and adopt systems they can understand, regulators increasingly demand it, and clear explanations make it possible to spot bias, debug mistakes, and keep things safe and fair. That is especially important in high-stakes areas like healthcare and finance, where a decision really needs to be justifiable.
+
+### 6b. Explain five ethical issues associated with Artificial Intelligence and Machine Learning systems.
+
+1. **Bias and discrimination**, where biased training data leads to unfair outcomes.
+2. **Privacy**, since these systems lean on large amounts of personal data.
+3. **Lack of transparency and accountability**, which makes it hard to explain decisions or say who is responsible.
+4. **Job displacement**, as automation replaces some human roles.
+5. **Security and misuse**, including deepfakes, autonomous weapons, and deliberate attacks on models.
+
+### 6c. Describe the importance of model evaluation before deployment.
+
+Evaluating a model on unseen data before it goes live confirms that it actually works and meets the standard you need. It reveals overfitting or underfitting, heads off costly errors in sensitive settings, and lets you compare models and check for bias. Skipping it means risking unreliable, unfair, or even harmful decisions once the model is in front of real users.
+
+### 6d. Explain why fairness and transparency are becoming essential requirements in AI systems.
+
+AI now helps decide things that seriously affect people, like loans, jobs, and diagnoses. Fairness makes sure different groups are treated equitably rather than discriminated against, and transparency means those decisions can be understood and checked. Together they build trust, satisfy growing legal and regulatory expectations, allow mistakes to be caught and corrected, and protect organisations from real harm and reputational damage. That is why they are quickly becoming non-negotiable.
+
+---
+
+_End of model answers (Questions 1–6)._
